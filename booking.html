@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Solar Cleaning - MySolar</title>
+  <meta name="description" content="Schedule a professional solar panel cleaning appointment online in less than 2 minutes with MySolar.">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-mysolar sticky-top">
+    <div class="container">
+      <a class="navbar-brand-logo" href="index.html">
+        <div class="logo-icon"><i class="bi bi-sun-fill"></i></div>
+        <div>My<span class="text-green">Solar</span></div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About MySolar</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="booking.html" class="btn btn-mysolar-primary active">
+            <i class="bi bi-calendar-check"></i> Book Cleaning
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       PAGE HEADER BANNER
+       ========================================== -->
+  <section class="bg-white py-5 border-bottom">
+    <div class="container text-center">
+      <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 mb-2">Fast Online Booking</span>
+      <h1 class="fw-bold display-5 mb-3">Book Solar Cleaning</h1>
+      <p class="text-muted fs-5 max-w-600 mx-auto">
+        Schedule your cleaning service online in less than 2 minutes. No advance payment required for V1!
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BOOKING FORM SECTION
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+          
+          <div class="form-card">
+            <div class="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom">
+              <div>
+                <h2 class="fw-bold h4 mb-1">Service Details & Schedule</h2>
+                <p class="text-muted small mb-0">Fill out your details to assign a certified cleaner</p>
+              </div>
+              <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">
+                <i class="bi bi-shield-check text-success me-1"></i> Safe & Secure
+              </span>
+            </div>
+
+            <!-- Booking Form -->
+            <form id="solarBookingForm" novalidate>
+              <div class="row g-3">
+                
+                <!-- Full Name -->
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Full Name *</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light text-muted"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" id="fullName" placeholder="e.g. Rahul Sharma" required>
+                  </div>
+                </div>
+
+                <!-- Mobile Number -->
+                <div class="col-md-6">
+                  <label for="mobileNumber" class="form-label">Mobile Number *</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light text-muted"><i class="bi bi-phone"></i></span>
+                    <input type="tel" class="form-control" id="mobileNumber" placeholder="e.g. +91 98765 43210" pattern="[0-9+\s\-]{10,15}" required>
+                  </div>
+                  <div class="form-text small">Our cleaner will call this number prior to arrival.</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="col-md-6">
+                  <label for="emailAddress" class="form-label">Email Address *</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light text-muted"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="e.g. rahul@example.com" required>
+                  </div>
+                </div>
+
+                <!-- Service Type Selector -->
+                <div class="col-md-6">
+                  <label for="serviceType" class="form-label">Service Type *</label>
+                  <select class="form-select" id="serviceType" required>
+                    <option value="residential" selected>Residential Solar Cleaning</option>
+                    <option value="commercial">Commercial Solar Cleaning</option>
+                    <option value="maintenance">Solar Panel Maintenance</option>
+                  </select>
+                </div>
+
+                <!-- Property Address -->
+                <div class="col-12">
+                  <label for="propertyAddress" class="form-label">Address (Street, City, Pincode) *</label>
+                  <textarea class="form-control" id="propertyAddress" rows="2" placeholder="e.g. Plot No. 42, Sunrise Colony, Green Park, New Delhi - 110016" required></textarea>
+                </div>
+
+                <!-- Number of Solar Panels -->
+                <div class="col-md-4">
+                  <label for="panelCount" class="form-label">Number of Solar Panels *</label>
+                  <select class="form-select" id="panelCount" required>
+                    <option value="1-10">1 to 10 Panels</option>
+                    <option value="11-25" selected>11 to 25 Panels</option>
+                    <option value="26-50">26 to 50 Panels</option>
+                    <option value="50+">50+ Panels (Commercial)</option>
+                  </select>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="col-md-4">
+                  <label for="preferredDate" class="form-label">Preferred Date *</label>
+                  <input type="date" class="form-control" id="preferredDate" required>
+                </div>
+
+                <!-- Preferred Time Slot -->
+                <div class="col-md-4">
+                  <label for="preferredTime" class="form-label">Preferred Time Slot *</label>
+                  <select class="form-select" id="preferredTime" required>
+                    <option value="Morning (8:00 AM - 11:00 AM)" selected>Morning (8 AM - 11 AM)</option>
+                    <option value="Midday (11:00 AM - 2:00 PM)">Midday (11 AM - 2 PM)</option>
+                    <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2 PM - 5 PM)</option>
+                  </select>
+                </div>
+
+                <!-- Additional Message / Notes -->
+                <div class="col-12">
+                  <label for="additionalMessage" class="form-label">Additional Instructions / Notes (Optional)</label>
+                  <textarea class="form-control" id="additionalMessage" rows="3" placeholder="e.g. Rooftop access key is with security guard, 2-story building."></textarea>
+                </div>
+
+                <!-- Submission Button -->
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-mysolar-primary btn-lg w-100 justify-content-center py-3">
+                    <i class="bi bi-calendar-plus-fill me-2"></i> Submit Solar Cleaning Booking
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3 d-inline-flex" href="index.html">
+            <div class="logo-icon"><i class="bi bi-sun-fill"></i></div>
+            <div class="text-white">My<span class="text-green">Solar</span></div>
+          </a>
+          <p class="text-white-50 small mb-3">
+            MySolar is a technology-focused solar panel cleaning startup dedicated to making solar maintenance simple, reliable, and accessible.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential Solar Cleaning</a></li>
+            <li><a href="services.html">Commercial Solar Cleaning</a></li>
+            <li><a href="services.html">Solar Panel Maintenance</a></li>
+            <li><a href="booking.html">Schedule an Inspection</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact Us</h5>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-telephone text-success"></i> +1 (800) 555-SOLAR</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope text-success"></i> support@mysolar.com</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-geo-alt text-success"></i> Serving Citywide & Metro Regions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 MySolar Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

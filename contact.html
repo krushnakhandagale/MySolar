@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - MySolar Panel Cleaning</title>
+  <meta name="description" content="Get in touch with MySolar for inquiries, custom commercial quotes, or service area coverage details.">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-mysolar sticky-top">
+    <div class="container">
+      <a class="navbar-brand-logo" href="index.html">
+        <div class="logo-icon"><i class="bi bi-sun-fill"></i></div>
+        <div>My<span class="text-green">Solar</span></div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About MySolar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="booking.html" class="btn btn-mysolar-primary">
+            <i class="bi bi-calendar-check"></i> Book Cleaning
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       PAGE HEADER BANNER
+       ========================================== -->
+  <section class="bg-white py-5 border-bottom">
+    <div class="container text-center">
+      <h1 class="fw-bold display-5 mb-3">Contact MySolar</h1>
+      <p class="text-muted fs-5 max-w-600 mx-auto">
+        Have questions about our cleaning methods, pricing, or service areas? We are here to help!
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT INFO & FORM SECTION
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Contact Details Card -->
+        <div class="col-lg-5">
+          <div class="contact-info-card">
+            <h3 class="fw-bold mb-4">Get In Touch</h3>
+            <p class="text-white-50 mb-4">
+              Reach out to our customer support team for inquiries, partnership opportunities, or custom commercial quotes.
+            </p>
+
+            <!-- Phone -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1 text-white">Phone Support</h5>
+                <p class="text-white-50 mb-0">+1 (800) 555-SOLAR</p>
+                <small class="text-white-50">Mon - Sat: 8:00 AM - 6:00 PM</small>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1 text-white">Email Address</h5>
+                <p class="text-white-50 mb-0">support@mysolar.com</p>
+                <small class="text-white-50">Expect a response within 24 hours</small>
+              </div>
+            </div>
+
+            <!-- Service Area -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1 text-white">Service Area</h5>
+                <p class="text-white-50 mb-0">Greater Metro & Suburb Regions</p>
+                <small class="text-white-50">Expanding to surrounding districts</small>
+              </div>
+            </div>
+
+            <!-- Quick Tip -->
+            <div class="p-3 bg-white-10 rounded-3 border border-light border-opacity-25 mt-4">
+              <div class="d-flex align-items-center gap-2 text-warning fw-bold mb-1">
+                <i class="bi bi-lightning-charge-fill"></i> Quick Booking Tip
+              </div>
+              <small class="text-white-50">
+                To book a cleaning appointment directly, please use our <a href="booking.html" class="text-success fw-bold text-decoration-none">Booking Form</a> for instant scheduling.
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="form-card">
+            <h3 class="fw-bold mb-2">Send Us a Message</h3>
+            <p class="text-muted mb-4">Fill out the form below and our team will get back to you shortly.</p>
+
+            <!-- JS Alert Feedback Placeholder -->
+            <div id="contactAlertContainer"></div>
+
+            <form id="mysolarContactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label">Your Full Name *</label>
+                  <input type="text" class="form-control" id="contactName" placeholder="e.g. Alex Morgan" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="e.g. alex@example.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactPhone" class="form-label">Mobile Number</label>
+                  <input type="tel" class="form-control" id="contactPhone" placeholder="e.g. +1 555 019 2831">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactSubject" class="form-label">Subject *</label>
+                  <select class="form-select" id="contactSubject" required>
+                    <option value="" selected disabled>Select subject...</option>
+                    <option value="General Query">General Query</option>
+                    <option value="Commercial Inquiry">Commercial Solar Inquiry</option>
+                    <option value="Pricing & Quote">Pricing & Quote</option>
+                    <option value="Feedback">Feedback</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label">Your Message *</label>
+                  <textarea class="form-control" id="contactMessage" rows="4" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-mysolar-primary btn-lg w-100 justify-content-center">
+                    <i class="bi bi-send-fill me-2"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3 d-inline-flex" href="index.html">
+            <div class="logo-icon"><i class="bi bi-sun-fill"></i></div>
+            <div class="text-white">My<span class="text-green">Solar</span></div>
+          </a>
+          <p class="text-white-50 small mb-3">
+            MySolar is a technology-focused solar panel cleaning startup dedicated to making solar maintenance simple, reliable, and accessible.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential Solar Cleaning</a></li>
+            <li><a href="services.html">Commercial Solar Cleaning</a></li>
+            <li><a href="services.html">Solar Panel Maintenance</a></li>
+            <li><a href="booking.html">Schedule an Inspection</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact Us</h5>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-telephone text-success"></i> +1 (800) 555-SOLAR</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope text-success"></i> support@mysolar.com</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-geo-alt text-success"></i> Serving Citywide & Metro Regions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 MySolar Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

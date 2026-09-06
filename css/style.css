@@ -1,0 +1,571 @@
+/* ==========================================================================
+   MySolar - Professional Solar Panel Cleaning Startup
+   Custom Stylesheet (Built on top of Bootstrap 5)
+   
+   Color Palette:
+   - Primary Brand Green: #059669 (Emerald Green - symbolising clean energy)
+   - Brand Green Hover:  #047857
+   - Dark Navy Blue:     #0F172A (Deep Slate Blue - modern tech contrast)
+   - Secondary Accent:   #0EA5E9 (Sky Blue - water & sky energy)
+   - Light Background:   #F8FAFC (Soft, clean light background)
+   - Card Border:        #E2E8F0
+   ========================================================================== */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --mysolar-green: #059669;
+  --mysolar-green-hover: #047857;
+  --mysolar-green-light: #d1fae5;
+  --mysolar-navy: #0f172a;
+  --mysolar-navy-light: #1e293b;
+  --mysolar-sky: #0ea5e9;
+  --mysolar-bg-light: #f8fafc;
+  --mysolar-card-bg: #ffffff;
+  --mysolar-text-main: #334155;
+  --mysolar-text-muted: #64748b;
+  --mysolar-border: #e2e8f0;
+  --mysolar-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --mysolar-shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --mysolar-radius: 12px;
+  --mysolar-radius-lg: 20px;
+}
+
+/* Base Reset & Typography */
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--mysolar-text-main);
+  background-color: var(--mysolar-bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mysolar-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* --- Brand Header & Navigation --- */
+.navbar-mysolar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--mysolar-border);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--mysolar-navy);
+  text-decoration: none;
+}
+
+.navbar-brand-logo .logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--mysolar-green), var(--mysolar-sky));
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+.navbar-brand-logo span.text-green {
+  color: var(--mysolar-green);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--mysolar-navy);
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--mysolar-green) !important;
+  background-color: var(--mysolar-green-light);
+}
+
+/* --- Custom Buttons --- */
+.btn-mysolar-primary {
+  background-color: var(--mysolar-green);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-mysolar-primary:hover {
+  background-color: var(--mysolar-green-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.btn-mysolar-secondary {
+  background-color: transparent;
+  color: var(--mysolar-navy);
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  border: 2px solid var(--mysolar-navy);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-mysolar-secondary:hover {
+  background-color: var(--mysolar-navy);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-mysolar-outline-green {
+  background-color: transparent;
+  color: var(--mysolar-green);
+  font-weight: 700;
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  border: 2px solid var(--mysolar-green);
+  transition: all 0.3s ease;
+}
+
+.btn-mysolar-outline-green:hover {
+  background-color: var(--mysolar-green);
+  color: #ffffff;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--mysolar-bg-light) 100%);
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--mysolar-green-light);
+  color: var(--mysolar-green);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title span.text-highlight {
+  background: linear-gradient(135deg, var(--mysolar-green), var(--mysolar-sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--mysolar-text-muted);
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+.hero-image-card {
+  position: relative;
+  border-radius: var(--mysolar-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--mysolar-shadow-lg);
+  border: 4px solid #ffffff;
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-floating-stat {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 22px;
+  border-radius: var(--mysolar-radius);
+  box-shadow: var(--mysolar-shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--mysolar-border);
+}
+
+.hero-floating-stat .stat-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--mysolar-green-light);
+  color: var(--mysolar-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+/* --- Section Styling --- */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--mysolar-text-muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+}
+
+/* --- Feature / Benefit Cards --- */
+.feature-card {
+  background-color: var(--mysolar-card-bg);
+  border: 1px solid var(--mysolar-border);
+  border-radius: var(--mysolar-radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--mysolar-shadow-lg);
+  border-color: rgba(5, 150, 105, 0.3);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--mysolar-green-light);
+  color: var(--mysolar-green);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Service Cards --- */
+.service-card {
+  background-color: var(--mysolar-card-bg);
+  border: 1px solid var(--mysolar-border);
+  border-radius: var(--mysolar-radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--mysolar-shadow-lg);
+}
+
+.service-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.service-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-img-wrap img {
+  transform: scale(1.06);
+}
+
+.service-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.service-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card-text {
+  color: var(--mysolar-text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* --- How It Works Steps --- */
+.step-card {
+  background-color: var(--mysolar-card-bg);
+  border: 1px solid var(--mysolar-border);
+  border-radius: var(--mysolar-radius);
+  padding: 2rem 1.5rem;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--mysolar-shadow-lg);
+  border-color: var(--mysolar-green);
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: var(--mysolar-navy);
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  border: 3px solid #ffffff;
+  box-shadow: var(--mysolar-shadow-sm);
+}
+
+.step-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--mysolar-green-light), #e0f2fe);
+  color: var(--mysolar-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0.75rem auto 1.25rem;
+}
+
+/* --- Why Choose Us Comparison Box --- */
+.why-us-box {
+  background-color: var(--mysolar-navy);
+  color: #ffffff;
+  border-radius: var(--mysolar-radius-lg);
+  padding: 3.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-us-box h2 {
+  color: #ffffff;
+}
+
+.why-us-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.why-us-list-item i {
+  color: var(--mysolar-green);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* --- Booking & Contact Forms --- */
+.form-card {
+  background-color: var(--mysolar-card-bg);
+  border: 1px solid var(--mysolar-border);
+  border-radius: var(--mysolar-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--mysolar-shadow-lg);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--mysolar-navy);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1.5px solid var(--mysolar-border);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background-color: #fdfdfd;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--mysolar-green);
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15);
+  background-color: #ffffff;
+}
+
+.contact-info-card {
+  background: linear-gradient(135deg, var(--mysolar-navy), var(--mysolar-navy-light));
+  color: #ffffff;
+  border-radius: var(--mysolar-radius-lg);
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.contact-info-card h3 {
+  color: #ffffff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 1.75rem;
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--mysolar-green);
+  flex-shrink: 0;
+}
+
+/* --- Banner CTA --- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--mysolar-green), #047857);
+  color: #ffffff;
+  border-radius: var(--mysolar-radius-lg);
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--mysolar-navy);
+  color: #94a3b8;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer h5 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--mysolar-green);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .why-us-box {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .btn-mysolar-primary, .btn-mysolar-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .form-card {
+    padding: 1.5rem;
+  }
+}
